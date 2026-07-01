@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 /* ----------------------------- PROGRAM DATA ----------------------------- */
-// Source: The Min-Max Program (5x/Week) by Jeff Nippard — transcribed from the user's spreadsheet.
+// Source: The Min-Max Program (5x/Week) by Jeff Nippard -- transcribed from the user's spreadsheet.
 
 const DAY_ORDER = ["Upper 1", "Lower 1", "Rest", "Upper 2", "Lower 2", "Arms/Delts", "Rest"];
 const TRAIN_DAYS = ["Upper 1", "Lower 1", "Upper 2", "Lower 2", "Arms/Delts"];
@@ -28,7 +28,7 @@ const EXERCISES = {
     { id: "l1-leg-curl", name: "Lying Leg Curl", warmup: "1-2", working: 2, reps: "6-8", rest: "1-2 min", sub1: "Seated Leg Curl", sub2: "Nordic Ham Curl", notes: "Biggest stretch possible at the bottom. Don't let your butt pop up as you curl.", normalRIR: [0, 0], introRIR: [1, 0], technique: "Lengthened Partials (Extend Set)" },
     { id: "l1-squat", name: "Squat (Your Choice)", warmup: "2-4", working: 2, reps: "6-8", rest: "3-5 min", sub1: "See notes", sub2: "See notes", notes: "Barbell Back Squat, Front Squat, Pendulum, Hack, Belt, or Smith Machine Squat.", normalRIR: [1, 0], introRIR: [3, 2], technique: null },
     { id: "l1-lunge", name: "Smith Machine Lunge", warmup: "2-4", working: 1, reps: "6-8", rest: "2-4 min", sub1: "DB Lunge", sub2: "Barbell Lunge", notes: "Minimize contribution from your back leg.", normalRIR: [0, null], introRIR: [1, null], technique: null },
-    { id: "l1-leg-ext", name: "Leg Extension", warmup: "1-2", working: 2, reps: "6-8", rest: "1-2 min", sub1: "Reverse Nordic", sub2: "Sissy Squat", notes: "Seat back as far as comfortable. Pull your butt into the seat — straps can help.", normalRIR: [0, 0], introRIR: [1, 0], technique: "Lengthened Partials (Extend Set)" },
+    { id: "l1-leg-ext", name: "Leg Extension", warmup: "1-2", working: 2, reps: "6-8", rest: "1-2 min", sub1: "Reverse Nordic", sub2: "Sissy Squat", notes: "Seat back as far as comfortable. Pull your butt into the seat -- straps can help.", normalRIR: [0, 0], introRIR: [1, 0], technique: "Lengthened Partials (Extend Set)" },
     { id: "l1-hip-abd", name: "Machine Hip Abduction", warmup: "0-1", working: 1, reps: "6-8", rest: "1-2 min", sub1: "Cable Hip Abduction", sub2: "Standing Plate Abduction", notes: "Foam pads between knees and the machine pads increase ROM if available.", normalRIR: [0, null], introRIR: [0, null], technique: null },
     { id: "l1-calf", name: "Standing Calf Raise", warmup: "0-1", working: 2, reps: "6-8", rest: "1-2 min", sub1: "Leg Press Calf Press", sub2: "Donkey Calf Raise", notes: "1-2 sec pause at the bottom; roll your ankle on the balls of your feet.", normalRIR: [0, 0], introRIR: [1, 0], technique: "Lengthened Partials (Extend Set)" },
   ],
@@ -42,7 +42,7 @@ const EXERCISES = {
     { id: "u2-cable-crunch", name: "Cable Crunch", warmup: "0-1", working: 2, reps: "6-8", rest: "1-2 min", sub1: "Weighted Crunch", sub2: "Machine Crunch", notes: "Round your lower back as you crunch. Maintain a mind-muscle connection.", normalRIR: [0, 0], introRIR: [1, 0], technique: null },
   ],
   "Lower 2": [
-    { id: "l2-leg-ext", name: "Leg Extension", warmup: "1-2", working: 2, reps: "8-10", rest: "1-2 min", sub1: "Reverse Nordic", sub2: "Sissy Squat", notes: "Seat back as far as comfortable. Pull your butt into the seat — straps can help.", normalRIR: [0, 0], introRIR: [1, 0], technique: "Lengthened Partials (Extend Set)" },
+    { id: "l2-leg-ext", name: "Leg Extension", warmup: "1-2", working: 2, reps: "8-10", rest: "1-2 min", sub1: "Reverse Nordic", sub2: "Sissy Squat", notes: "Seat back as far as comfortable. Pull your butt into the seat -- straps can help.", normalRIR: [0, 0], introRIR: [1, 0], technique: "Lengthened Partials (Extend Set)" },
     { id: "l2-rdl", name: "Barbell RDL", warmup: "2-3", working: 2, reps: "6-8", rest: "2-3 min", sub1: "DB RDL", sub2: "Seated Cable Deadlift", notes: "Glutes straight back, bar centered over mid-foot. Deep stretch, keep your spine neutral.", normalRIR: [2, 1], introRIR: [3, 2], technique: null },
     { id: "l2-hip-thrust", name: "Machine Hip Thrust", warmup: "2-4", working: 2, reps: "6-8", rest: "2-3 min", sub1: "Barbell Hip Thrust", sub2: "45° Hyperextension", notes: "Squeeze glutes hard at the top and control the weight on the way down.", normalRIR: [1, 0], introRIR: [2, 1], technique: null },
     { id: "l2-leg-press", name: "Leg Press", warmup: "2-4", working: 1, reps: "6-8", rest: "2-3 min", sub1: "Smith Machine Squat", sub2: "Barbell Squat", notes: "Feet lower on the platform for more quad focus. Get deep without excessive back rounding.", normalRIR: [0, null], introRIR: [1, null], technique: null },
@@ -224,7 +224,7 @@ function WeekStrip({ week, setWeek }) {
           <button
             key={w}
             onClick={() => setWeek(w)}
-            title={`Week ${w} — ${info.label}`}
+            title={`Week ${w} -- ${info.label}`}
             className={`flex-1 h-7 rounded-sm relative transition-all ${active ? "ring-2 ring-offset-2 ring-offset-neutral-950 ring-orange-500" : "opacity-60 hover:opacity-100"}`}
           >
             <div className={`absolute inset-0 rounded-sm ${info.color}`} />
@@ -694,6 +694,7 @@ function CheckInTab({ checkins, setCheckins }) {
   const [form, setForm] = useState({
     date: todayISO(),
     bodyweight: "",
+    steps: "",
     sleep: 3,
     energy: 3,
     soreness: 3,
@@ -703,11 +704,11 @@ function CheckInTab({ checkins, setCheckins }) {
   const [saved, setSaved] = useState(false);
 
   async function submit() {
-    const entry = { id: `${Date.now()}`, ...form, bodyweight: form.bodyweight === "" ? null : Number(form.bodyweight) };
+    const entry = { id: `${Date.now()}`, ...form, bodyweight: form.bodyweight === "" ? null : Number(form.bodyweight), steps: form.steps === "" ? null : Number(form.steps) };
     const next = [...checkins, entry];
     await setCheckins(next);
     setSaved(true);
-    setForm({ date: todayISO(), bodyweight: "", sleep: 3, energy: 3, soreness: 3, adherence: 5, notes: "" });
+    setForm({ date: todayISO(), bodyweight: "", steps: "", sleep: 3, energy: 3, soreness: 3, adherence: 5, notes: "" });
     setTimeout(() => setSaved(false), 2500);
   }
 
@@ -738,9 +739,19 @@ function CheckInTab({ checkins, setCheckins }) {
             <input
               type="number"
               inputMode="decimal"
-              placeholder="—"
+              placeholder="--"
               value={form.bodyweight}
               onChange={(e) => setForm({ ...form, bodyweight: e.target.value })}
+              className="w-full bg-neutral-950 border border-neutral-700 rounded-sm px-2 py-1.5 text-xs font-mono text-neutral-100 placeholder-neutral-600"
+            />
+          </Field>
+          <Field label="Steps">
+            <input
+              type="number"
+              inputMode="numeric"
+              placeholder="--"
+              value={form.steps}
+              onChange={(e) => setForm({ ...form, steps: e.target.value })}
               className="w-full bg-neutral-950 border border-neutral-700 rounded-sm px-2 py-1.5 text-xs font-mono text-neutral-100 placeholder-neutral-600"
             />
           </Field>
@@ -810,6 +821,7 @@ function CheckInTab({ checkins, setCheckins }) {
                 <span>{c.bodyweight ? `${c.bodyweight} lbs` : ""}</span>
               </div>
               <div className="flex gap-3 text-[11px] text-neutral-500 font-mono mb-1">
+                {c.steps ? <span>{c.steps} steps</span> : null}
                 <span>Sleep {c.sleep}/5</span>
                 <span>Energy {c.energy}/5</span>
                 <span>Soreness {c.soreness}/5</span>
@@ -884,10 +896,10 @@ function ScheduleTab({ settings, setSettings }) {
       <div className="bg-neutral-900 border border-neutral-800 rounded-sm p-4">
         <div className="text-sm font-bold mb-3">12-Week Structure</div>
         <div className="space-y-2">
-          <BlockRow color={PHASE_INFO.intro.color} title="Week 1 — Intro Week" desc="Lighter effort to learn the movements before ramping intensity." />
-          <BlockRow color={PHASE_INFO.accumulation.color} title="Weeks 2–6 — Block 1" desc="Most sets taken to failure or 1 rep shy. Progressive overload via load/reps." />
-          <BlockRow color={PHASE_INFO.deload.color} title="Week 7 — Deload Week" desc="Reduced effort to dissipate fatigue before Block 2." />
-          <BlockRow color={PHASE_INFO.intensification.color} title="Weeks 8–12 — Block 2" desc="Same effort as Block 1, plus last-set intensity techniques (drop sets, myo-reps, lengthened partials, static holds)." />
+          <BlockRow color={PHASE_INFO.intro.color} title="Week 1 -- Intro Week" desc="Lighter effort to learn the movements before ramping intensity." />
+          <BlockRow color={PHASE_INFO.accumulation.color} title="Weeks 2–6 -- Block 1" desc="Most sets taken to failure or 1 rep shy. Progressive overload via load/reps." />
+          <BlockRow color={PHASE_INFO.deload.color} title="Week 7 -- Deload Week" desc="Reduced effort to dissipate fatigue before Block 2." />
+          <BlockRow color={PHASE_INFO.intensification.color} title="Weeks 8–12 -- Block 2" desc="Same effort as Block 1, plus last-set intensity techniques (drop sets, myo-reps, lengthened partials, static holds)." />
         </div>
       </div>
 
@@ -905,10 +917,10 @@ function ScheduleTab({ settings, setSettings }) {
 
       <div className="bg-neutral-900 border border-neutral-800 rounded-sm p-4 space-y-2 text-xs text-neutral-400">
         <div className="text-sm font-bold text-neutral-100 mb-1">Reps in Reserve (RIR)</div>
-        <p>RIR 0 means failure — zero reps left in the tank. RIR 1 means stopping one rep shy.</p>
-        <p>For heavy compounds (Squat, Incline Press, Leg Press, Smith Lunge), RIR 0 means you couldn't get another rep — you don't need to actually attempt and fail it for safety.</p>
+        <p>RIR 0 means failure -- zero reps left in the tank. RIR 1 means stopping one rep shy.</p>
+        <p>For heavy compounds (Squat, Incline Press, Leg Press, Smith Lunge), RIR 0 means you couldn't get another rep -- you don't need to actually attempt and fail it for safety.</p>
         <p>For everything else, RIR 0 means go until you physically can't complete the rep.</p>
-        <p className="pt-1 border-t border-neutral-800 mt-2">Start every session with ~5 minutes of light cardio, then the listed exercise-specific warm-up sets — light, not fatiguing.</p>
+        <p className="pt-1 border-t border-neutral-800 mt-2">Start every session with ~5 minutes of light cardio, then the listed exercise-specific warm-up sets -- light, not fatiguing.</p>
       </div>
     </div>
   );
