@@ -48,4 +48,5 @@ npm run preview
 ## Notes
 
 - Data is stored in the browser's local storage on your device. It is **not** synced across devices — if you reinstall the app or switch phones, your history won't carry over. (Worth keeping in mind; an export/backup feature could be added later if useful.)
-- To update the app after editing the code, just commit and push to `main` — the GitHub Action redeploys automatically.
+- To update the app after editing the code, just commit and push to `main` — the GitHub Action redeploys automatically. 
+- 
